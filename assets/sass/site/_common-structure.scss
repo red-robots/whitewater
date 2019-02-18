@@ -1,0 +1,79 @@
+* { -webkit-hyphens: none; }
+div {
+	
+}
+.clear {clear: both;}
+.wrapper {
+	width: 100%;
+	margin: 0px auto;
+	padding: 20px;
+	
+	@media screen and (min-width: $tabwidth) {
+		width: 100%;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 1200px;
+		padding: 0px;
+	}
+}
+
+.content-area {
+	width: 100%;
+	margin: 0px auto;
+	
+	@media screen and (min-width: $tabwidth) {
+		width: 66%;
+		float: left;
+		margin: 0;
+	}
+	@media screen and (min-width: $deskwidth) {
+		/*width: 1200px;*/
+	}
+}
+
+.widget-area {
+	width: 100%;
+	margin: 0px auto;
+	
+	@media screen and (min-width: $tabwidth) {
+		width: 26%;
+		float: right;
+		margin: 0;
+	}
+	@media screen and (min-width: $deskwidth) {
+		/*width: 1200px;*/
+	}
+}
+#masthead {
+	background-color: tan;
+}
+/* Logo */
+.logo , h1.logo {
+	width: 300px;
+	background-image: url(images/logo.png);	
+	margin: 10px auto;
+
+	@media screen and (min-width: $tabwidth) {
+		width: 300px;
+		float: left;
+		margin: 0;
+	}
+	@media screen and (min-width: $deskwidth) {
+		/*width: 1200px;*/
+	}
+}
+.logo a, h1.logo a {
+	width: 300px;
+	display: block;
+
+	@media screen and (min-width: $tabwidth) {
+		width: 300px;
+	}
+	@media screen and (min-width: $deskwidth) {
+		/*width: 1200px;*/
+	}
+}
+.site-footer {
+	width: 100%;
+	clear: both;
+}
