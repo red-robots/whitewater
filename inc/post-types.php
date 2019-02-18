@@ -12,7 +12,7 @@ function js_custom_init() {
             'single'    => 'Project',
             'menu_icon' => 'dashicons-media-interactive',
             'supports'  => array('title','editor','thumbnail'),
-            'show_in_rest'       => true,
+            
         ),
         array(
             'post_type' => 'team',
@@ -21,7 +21,7 @@ function js_custom_init() {
             'single'    => 'Team',
             'menu_icon' => 'dashicons-groups',
             'supports'  => array('title','editor','thumbnail'),
-            'show_in_rest'       => true,
+            
         ),
     );
     
@@ -35,6 +35,7 @@ function js_custom_init() {
             $supports = ( isset($p['supports']) && $p['supports'] ) ? $p['supports'] : array('title','editor','custom-fields','thumbnail'); 
             $taxonomies = ( isset($p['taxonomies']) && $p['taxonomies'] ) ? $p['taxonomies'] : array(); 
             $parent_item_colon = ( isset($p['parent_item_colon']) && $p['parent_item_colon'] ) ? $p['parent_item_colon'] : ""; 
+            //$show_in_rest = ( isset($p['show_in_rest']) && $p['show_in_rest'] ) ? $p['show_in_rest'] : 'false';
             $menu_position = ( isset($p['menu_position']) && $p['menu_position'] ) ? $p['menu_position'] : 20; 
             
             if($p_type) {
@@ -68,7 +69,8 @@ function js_custom_init() {
                     'hierarchical' => false, // 'false' acts like posts 'true' acts like pages
                     'menu_position' => $menu_position,
                     'menu_icon'=> $menu_icon,
-                    'supports' => $supports
+                    'supports' => $supports,
+                    'show_in_rest' => true
                 ); 
                 
                 register_post_type($p_type,$args); // name used in query
