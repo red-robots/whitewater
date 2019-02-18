@@ -6,7 +6,13 @@
  *
  * @package ACStarter
  */
+/*-------------------------------------
 
+  gutenberg stuff
+
+---------------------------------------*/
+add_theme_support( 'align-wide' );
+add_theme_support('editor-styles');
 /*-------------------------------------
 	Custom client login, link and title.
 ---------------------------------------*/

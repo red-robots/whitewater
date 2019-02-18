@@ -11,7 +11,8 @@ function js_custom_init() {
             'plural'    => 'Projects',
             'single'    => 'Project',
             'menu_icon' => 'dashicons-media-interactive',
-            'supports'  => array('title','editor','thumbnail')
+            'supports'  => array('title','editor','thumbnail'),
+            'show_in_rest'       => true,
         ),
         array(
             'post_type' => 'team',
@@ -19,7 +20,8 @@ function js_custom_init() {
             'plural'    => 'Team',
             'single'    => 'Team',
             'menu_icon' => 'dashicons-groups',
-            'supports'  => array('title','editor','thumbnail')
+            'supports'  => array('title','editor','thumbnail'),
+            'show_in_rest'       => true,
         ),
     );
     
