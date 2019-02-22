@@ -5,3 +5,21 @@ h1, h2, h3, h4, h5, h6 {
 .entry-content h1 {
 	font-size: 30px;
 }
+header.page-title,
+header.sub-page-title {
+	width: 100%;
+	float: left;
+	
+	h1, h2 {
+		font-family: $font-heading;
+		font-weight: 400;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+	}
+}
+header.page-title {
+	
+}
+header.sub-page-title {
+	
+}

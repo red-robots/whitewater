@@ -20,6 +20,8 @@
 
 <script defer src="<?php bloginfo( 'template_url' ); ?>/assets/svg-with-js/js/fontawesome-all.js"></script>
 
+<link rel="stylesheet" href="https://use.typekit.net/jcg7ghc.css">
+
 
 <?php wp_head(); ?>
 </head>
@@ -29,25 +31,56 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'acstarter' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="wrapper">
+		<div class="header-wrapper">
 			
 			<?php if(is_home()) { ?>
 	            <h1 class="logo">
 		            <a href="<?php bloginfo('url'); ?>">
-		            	<img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="<?php bloginfo('name'); ?>">
+		            	<img src="<?php bloginfo('template_url'); ?>/images/Whitewater.png" alt="<?php bloginfo('name'); ?>">
 		            </a>
 	            </h1>
 	        <?php } else { ?>
 	            <div class="logo">
 	            	<a href="<?php bloginfo('url'); ?>">
-		            	<img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="<?php bloginfo('name'); ?>">
+		            	<img src="<?php bloginfo('template_url'); ?>/images/Whitewater.png" alt="<?php bloginfo('name'); ?>">
 		            </a>
 	            </div>
 	        <?php } ?>
 
-			<?php get_template_part('template-parts/nav'); ?>
-			
+			<?php get_template_part('template-parts/nav-mobile'); ?>
+
 	</div><!-- wrapper -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content wrapper">
+
+	<?php get_template_part('template-parts/nav'); ?>
+
+	<?php 
+		if( is_front_page() ) {
+			$post = get_post(12); // Homepage
+			setup_postdata( $post );
+				$featImg = get_field('header_image');
+			wp_reset_postdata();
+		} else {
+			$featImg = get_field('header_image');
+		}
+
+		if( $featImg ) {
+	 ?>
+	 	<section class="page-header">
+	 		<img src="<?php echo $featImg['url']; ?>" alt="<?php echo $featImg['alt']; ?>">
+	 		<header class="page-title">
+	 			<h1><?php the_title(); ?></h1>
+	 		</header>
+	 		<article class="page">
+	 			<?php 
+	 				$pageContent = get_field('page_intro');
+	 				echo $pageContent;
+	 			 ?>
+	 		</article>
+	 	</section>
+	 	
+	 <?php } ?>
+
+

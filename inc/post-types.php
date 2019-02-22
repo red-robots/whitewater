@@ -70,7 +70,7 @@ function js_custom_init() {
                     'menu_position' => $menu_position,
                     'menu_icon'=> $menu_icon,
                     'supports' => $supports,
-                    'show_in_rest' => true
+                    // 'show_in_rest' => true
                 ); 
                 
                 register_post_type($p_type,$args); // name used in query
