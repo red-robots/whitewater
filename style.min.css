@@ -1634,8 +1634,8 @@ button:focus{outline:0}
 body,button,input,select,textarea{color:#404040;font-family:brandon-grotesque,sans-serif;font-size:16px;font-size:1rem;line-height:1.5}
 h1,h2,h3,h4,h5,h6{clear:both}
 .entry-content h1{font-size:30px}
-header.page-title,header.sub-page-title{width:100%;float:left}
-header.page-title h1,header.page-title h2,header.sub-page-title h1,header.sub-page-title h2{font-family:brandon-grotesque,sans-serif;font-weight:400;letter-spacing:2px;text-transform:uppercase}
+header.page-title,header.sub-page-title,.sub-pages,.sections{width:100%;float:left}
+header.page-title h1,header.page-title h2,header.sub-page-title h1,header.sub-page-title h2,.sub-pages h1,.sub-pages h2,.sections h1,.sections h2{font-family:brandon-grotesque,sans-serif;font-weight:400;letter-spacing:2px;text-transform:uppercase}
 p{margin-bottom:1.5em}
 dfn,cite,em,i{font-style:italic}
 blockquote{margin:0 1.5em}
@@ -1885,16 +1885,27 @@ section.page-header{width:100%}
 }section.page-header article.page{width:85%;float:left;padding:0 30px}
 @media screen and (min-width:600px){section.page-header article.page{width:100%;padding:0}
 }@media screen and (min-width:1200px){section.page-header article.page{width:45%}
-}.child-pages{width:100%;float:left}
-.child-pages .image{width:100%;float:left}
-@media screen and (min-width:600px){.child-pages .image{width:50%}
-}.child-pages .copy{width:100%;float:left;padding:30px}
-@media screen and (min-width:600px){.child-pages .copy{width:50%;padding:0 0 0 50px}
-}@media screen and (min-width:600px){.child-pages .copy header{padding:0 0 30px 0}
-}.child-pages .copy article{width:70%}
-@media screen and (min-width:600px){.child-pages .copy article{width:100%}
-}@media screen and (min-width:1200px){.child-pages .copy article{width:66%}
-}.child-pages .copy p{font-size:1.2rem}
+}section.page-header article.project{width:100%;float:left;padding:0 30px}
+@media screen and (min-width:600px){section.page-header article.project{width:100%;padding:0}
+}@media screen and (min-width:1200px){section.page-header article.project{width:96%}
+}.child-pages{width:100%;float:left;margin:0 0 50px 0}
+.child-pages .image-right,.child-pages .image-left{width:100%}
+@media screen and (min-width:600px){.child-pages .image-right,.child-pages .image-left{width:50%}
+}.child-pages .copy-left,.child-pages .copy-right{width:100%;padding:30px;font-style:italic}
+@media screen and (min-width:600px){.child-pages .copy-left,.child-pages .copy-right{width:50%;padding:0 0 0 50px}
+}@media screen and (min-width:600px){.child-pages .copy-left header,.child-pages .copy-right header{padding:0 0 30px 0}
+}.child-pages .copy-left article,.child-pages .copy-right article{width:70%}
+@media screen and (min-width:600px){.child-pages .copy-left article,.child-pages .copy-right article{width:100%}
+}@media screen and (min-width:1200px){.child-pages .copy-left article,.child-pages .copy-right article{width:66%}
+}.child-pages .copy-left article.sections,.child-pages .copy-right article.sections{width:100%}
+@media screen and (min-width:600px){.child-pages .copy-left article.sections,.child-pages .copy-right article.sections{width:100%}
+}@media screen and (min-width:1200px){.child-pages .copy-left article.sections,.child-pages .copy-right article.sections{width:90%}
+}.child-pages .copy-left p,.child-pages .copy-right p{font-size:1.2rem}
+.child-pages .image-right,.child-pages .copy-left{float:right}
+.child-pages .image-left,.child-pages .copy-right{float:left}
+.learnmore{width:auto;position:relative;display:inline-block;text-transform:uppercase;letter-spacing:2px}
+.learnmore a{padding:10px 20px;display:block;color:#fff;background-color:#414042;text-decoration:none;-webkit-transition:all ease .6s;transition:all ease .6s}
+.learnmore a:hover{background-color:rgba(65,64,66,0.5)}
 .site-footer{width:100%;padding:100px 2% 2% 2%;clear:both;text-align:center;font-style:italic;font-size:.8rem;float:left}
 @media screen and (min-width:600px){.site-footer{text-align:right}
 }.site-footer a{color:rgba(0,0,0,0.9);text-decoration:none}
@@ -1903,6 +1914,19 @@ section.page-header{width:100%}
 .byline,.updated:not(.published){display:none}
 .single .byline,.group-blog .byline{display:inline}
 .page-content,.entry-content,.entry-summary{margin:1.5em 0 0}
+.projects{width:100%;float:left;margin:0 0 50px 0;clear:both}
+.projects .image-right,.projects .image-left{width:100%}
+@media screen and (min-width:600px){.projects .image-right,.projects .image-left{width:50%}
+}.projects .copy-left,.projects .copy-right{width:100%;padding:30px;font-style:italic}
+@media screen and (min-width:600px){.projects .copy-left,.projects .copy-right{width:50%;padding:0 0 0 50px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
+}@media screen and (min-width:600px){.projects .copy-left header,.projects .copy-right header{padding:0 0 30px 0}
+}.projects .copy-left article.sub-projects,.projects .copy-right article.sub-projects{width:100%;margin:0 auto}
+.projects .copy-left p,.projects .copy-right p{font-size:1.2rem}
+.projects .centered-copy{width:70%;margin:0 auto}
+@media screen and (min-width:600px){.projects .centered-copy{width:80%}
+}@media screen and (min-width:1200px){.projects .centered-copy{width:60%}
+}.projects .image-right,.projects .copy-left{float:right}
+.projects .image-left,.projects .copy-right{float:left}
 .page-links{clear:both;margin:0 0 1.5em}
 .faqrow{width:auto;overflow:hidden;margin:0 0 20px 0;background-color:rgba(255,255,255,0.05);border-radius:10px}
 .question{width:auto;float:left;margin:10px;font-weight:bold;font-size:20px;cursor:pointer;line-height:1.3;position:relative;padding:0 0 0 20px}

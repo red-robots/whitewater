@@ -21,7 +21,66 @@
 .entry-summary {
 	margin: 1.5em 0 0;
 }
-
+.projects {
+	width: 100%;
+	float: left;
+	margin: 0 0 50px 0;
+	clear: both;
+	@media screen and (min-width: $tabwidth) {
+		// display: flex;
+		// direction: row;
+		// align-items: stretch;
+	}
+	.image-right, .image-left {
+		width: 100%;
+		@media screen and (min-width: $tabwidth) {
+			width: 50%;
+		}
+	}
+	.copy-left, .copy-right {
+		width: 100%;
+		padding: 30px;
+		font-style: italic;
+		@media screen and (min-width: $tabwidth) {
+			width: 50%;
+			padding: 0 0 0 50px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+		header {
+			@media screen and (min-width: $tabwidth) {
+				padding: 0px 0 30px 0;
+			}
+		}
+		article.sub-projects {
+			width: 100%;
+			margin: 0 auto;
+			@media screen and (min-width: $tabwidth) {
+			
+			}
+			@media screen and (min-width: $deskwidth) {
+				// width: 66%;
+			}
+		}
+		p {
+			font-size: 1.2rem;
+		}
+	}
+	.centered-copy {
+		width: 70%;
+		margin: 0 auto;
+		@media screen and (min-width: $tabwidth) {
+			width: 80%;
+		}
+		@media screen and (min-width: $deskwidth) {
+			width: 60%;
+		}
+	}
+	
+	.image-right, .copy-left { float: right; }
+	.image-left, .copy-right { float: left; }
+}
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;

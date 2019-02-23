@@ -1,8 +1,8 @@
 <?php
 /**
- * Template Name: What We Do
+ * The template for displaying all single posts.
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
  * @package ACStarter
  */
@@ -12,28 +12,22 @@ get_header(); ?>
 	<div id="primary" class="content-area-full">
 		<main id="main" class="site-main" role="main">
 
-			<?php
-			$i = 0;
-			$parent = new WP_Query(array(
+		<?php
+		while ( have_posts() ) : the_post();
 
-			    'post_type'      => 'page',
-			    'posts_per_page' => -1,
-			    'post_parent'    => $post->ID,
-			    'order'          => 'ASC',
-			    'orderby'        => 'menu_order'
-
-			));
-
-			if ($parent->have_posts()) : ?>
-				
-					
 			
-			    <?php while ($parent->have_posts()) : $parent->the_post(); 
+
+		endwhile; // End of the loop.
+		?>
+
+		<?php
+			$i = 0;
+			if( have_rows('sections') ) : while( have_rows('sections') ) : the_row();
 
 			    	$i++;
 
-			    	$pageContent = get_field('excerpt');
-			    	$featImg = get_field('header_image');
+			    	$pageContent = get_sub_field('section_copy');
+			    	$featImg = get_sub_field('section_image');
 			    	
 			    	if( $i == 2 ) { $i = 0; } 
 			    	if( $i == 1 ) {
@@ -49,14 +43,8 @@ get_header(); ?>
 		 				<img src="<?php echo $featImg['url']; ?>" alt="<?php echo $featImg['alt']; ?>">
 		 			</section>
 		 			<section class="copy<?php echo $align; ?> wow <?php echo $slide; ?>">
-		 				<header class="sub-page-title">
-				 			<h2><?php the_title(); ?></h2>
-				 		</header>
-				 		<article class="sub-pages">
+		 				<article class="sections">
 				 			<?php echo $pageContent; ?>
-				 			<div class="learnmore">
-				 				<a href="<?php the_permalink(); ?>">Learn More</a>
-				 			</div>
 				 		</article>
 		 			</section>
 			    </section>

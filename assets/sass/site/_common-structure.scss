@@ -114,22 +114,33 @@ section.page-header {
 			width: 45%;
 		}
 	}
+	article.project {
+		width: 100%;
+		float: left;
+		padding: 0 30px;
+		@media screen and (min-width: $tabwidth) {
+			width: 100%;
+			padding: 0;
+		}
+		@media screen and (min-width: $deskwidth) {
+			width: 96%;
+		}
+	}
 }
 .child-pages {
 	width: 100%;
 	float: left;
-	.image {
+	margin: 0 0 50px 0;
+	.image-right, .image-left {
 		width: 100%;
-		float: left;
 		@media screen and (min-width: $tabwidth) {
 			width: 50%;
 		}
 	}
-	.copy {
+	.copy-left, .copy-right {
 		width: 100%;
-		float: left;
 		padding: 30px;
-
+		font-style: italic;
 		@media screen and (min-width: $tabwidth) {
 			width: 50%;
 			padding: 0 0 0 50px;
@@ -148,8 +159,37 @@ section.page-header {
 				width: 66%;
 			}
 		}
+		article.sections {
+			width: 100%;
+			@media screen and (min-width: $tabwidth) {
+				width: 100%;
+			}
+			@media screen and (min-width: $deskwidth) {
+				width: 90%;
+			}
+		}
 		p {
 			font-size: 1.2rem;
+		}
+	}
+	.image-right, .copy-left { float: right; }
+	.image-left, .copy-right { float: left; }
+}
+.learnmore {
+	width: auto;
+	position: relative;
+	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	a {
+		padding: 10px 20px;
+		display: block;
+		color: #fff;
+		background-color: $color-black;
+		text-decoration: none;
+		@include transition(all ease .6s);
+		&:hover {
+			background-color: rgba($color-black, .5);
 		}
 	}
 }

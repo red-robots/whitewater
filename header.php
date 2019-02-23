@@ -66,14 +66,22 @@
 			$featImg = get_field('header_image');
 		}
 
+		if(get_post_type() == 'page' ) {
+			$pType = 'page';
+		} elseif(get_post_type() == 'project' ) {
+			$pType = 'project';
+		} else {
+			$pType = 'post';
+		}
+
 		if( $featImg ) {
 	 ?>
-	 	<section class="page-header">
+	 	<section class="page-header wow fadeIn">
 	 		<img src="<?php echo $featImg['url']; ?>" alt="<?php echo $featImg['alt']; ?>">
 	 		<header class="page-title">
 	 			<h1><?php the_title(); ?></h1>
 	 		</header>
-	 		<article class="page">
+	 		<article class="<?php echo $pType; ?>">
 	 			<?php 
 	 				$pageContent = get_field('page_intro');
 	 				echo $pageContent;

@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: What We Do
+ * Template Name: Current Projects
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -16,9 +16,8 @@ get_header(); ?>
 			$i = 0;
 			$parent = new WP_Query(array(
 
-			    'post_type'      => 'page',
+			    'post_type'      => 'project',
 			    'posts_per_page' => -1,
-			    'post_parent'    => $post->ID,
 			    'order'          => 'ASC',
 			    'orderby'        => 'menu_order'
 
@@ -44,20 +43,22 @@ get_header(); ?>
 			    		$align = '-right';
 			    	}
 	 			?>
-			    <section class="child-pages">	
-		 			<section class="image<?php echo $align; ?> wow <?php echo $slide; ?>">
+			    <section class="projects">	
+		 			<section class="image<?php echo $align; ?> wow <?php echo $slide; ?> js-blocks">
 		 				<img src="<?php echo $featImg['url']; ?>" alt="<?php echo $featImg['alt']; ?>">
 		 			</section>
-		 			<section class="copy<?php echo $align; ?> wow <?php echo $slide; ?>">
-		 				<header class="sub-page-title">
-				 			<h2><?php the_title(); ?></h2>
-				 		</header>
-				 		<article class="sub-pages">
-				 			<?php echo $pageContent; ?>
-				 			<div class="learnmore">
-				 				<a href="<?php the_permalink(); ?>">Learn More</a>
-				 			</div>
-				 		</article>
+		 			<section class="copy<?php echo $align; ?> wow <?php echo $slide; ?> js-blocks">
+		 				<div class="centered-copy">
+			 				<header class="sub-page-title">
+					 			<h2><?php the_title(); ?></h2>
+					 		</header>
+					 		<article class="sub-projects">
+					 			<?php echo $pageContent; ?>
+					 			<div class="learnmore">
+					 				<a href="<?php the_permalink(); ?>">Learn More</a>
+					 			</div>
+					 		</article>
+				 		</div>
 		 			</section>
 			    </section>
 
