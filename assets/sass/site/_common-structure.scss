@@ -96,6 +96,9 @@ section.page-header {
 		float: right;
 		padding: 0 0 50px 0;
 	}
+	img {
+		width: 100%;
+	}
 	header {
 		padding: 15px 30px;
 		@media screen and (min-width: $tabwidth) {

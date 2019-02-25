@@ -1635,7 +1635,7 @@ body,button,input,select,textarea{color:#404040;font-family:brandon-grotesque,sa
 h1,h2,h3,h4,h5,h6{clear:both}
 .entry-content h1{font-size:30px}
 header.page-title,header.sub-page-title,.sub-pages,.sections{width:100%;float:left}
-header.page-title h1,header.page-title h2,header.sub-page-title h1,header.sub-page-title h2,.sub-pages h1,.sub-pages h2,.sections h1,.sections h2{font-family:brandon-grotesque,sans-serif;font-weight:400;letter-spacing:2px;text-transform:uppercase}
+header.page-title h1,header.page-title h2,header.sub-page-title h1,header.sub-page-title h2,.sub-pages h1,.sub-pages h2,.sections h1,.sections h2{font-family:brandon-grotesque,sans-serif;font-weight:400;letter-spacing:2px;text-transform:uppercase;margin:0 0 10px 0}
 p{margin-bottom:1.5em}
 dfn,cite,em,i{font-style:italic}
 blockquote{margin:0 1.5em}
@@ -1880,7 +1880,8 @@ html[xmlns] .flexslider .slides{display:block}
 @media screen and (min-width:1200px){}
 section.page-header{width:100%}
 @media screen and (min-width:600px){section.page-header{width:76%;float:right;padding:0 0 50px 0}
-}section.page-header header{padding:15px 30px}
+}section.page-header img{width:100%}
+section.page-header header{padding:15px 30px}
 @media screen and (min-width:600px){section.page-header header{padding:50px 0 30px 0}
 }section.page-header article.page{width:85%;float:left;padding:0 30px}
 @media screen and (min-width:600px){section.page-header article.page{width:100%;padding:0}

@@ -64,6 +64,7 @@
 			wp_reset_postdata();
 		} else {
 			$featImg = get_field('header_image');
+			$featImgSingle = get_field('header_image_single');
 		}
 
 		if(get_post_type() == 'page' ) {
@@ -77,7 +78,11 @@
 		if( $featImg ) {
 	 ?>
 	 	<section class="page-header wow fadeIn">
-	 		<img src="<?php echo $featImg['url']; ?>" alt="<?php echo $featImg['alt']; ?>">
+	 		<?php if( $featImgSingle ) { ?>
+	 			<img src="<?php echo $featImgSingle['url']; ?>" alt="<?php echo $featImgSingle['alt']; ?>">
+	 		<?php } else { ?>
+	 			<img src="<?php echo $featImg['url']; ?>" alt="<?php echo $featImg['alt']; ?>">
+	 		<?php } ?>
 	 		<header class="page-title">
 	 			<h1><?php the_title(); ?></h1>
 	 		</header>
