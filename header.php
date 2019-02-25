@@ -83,9 +83,11 @@
 	 		<?php } else { ?>
 	 			<img src="<?php echo $featImg['url']; ?>" alt="<?php echo $featImg['alt']; ?>">
 	 		<?php } ?>
-	 		<header class="page-title">
-	 			<h1><?php the_title(); ?></h1>
-	 		</header>
+	 		<?php if( !is_front_page() ) { ?>
+		 		<header class="page-title">
+		 			<h1><?php the_title(); ?></h1>
+		 		</header>
+	 		<?php } ?>
 	 		<article class="<?php echo $pType; ?>">
 	 			<?php 
 	 				$pageContent = get_field('page_intro');
