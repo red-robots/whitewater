@@ -202,8 +202,13 @@ section.page-header {
 	}
 }
 .site-footer {
-	width: 100%;
 	padding: 100px 2% 2% 2%;
+}
+.site-footer-home {
+	padding: 0 2% 2% 2%;
+}
+.site-footer, .site-footer-home  {
+	width: 100%;
 	clear: both;
 	text-align: center;
 	font-style: italic;

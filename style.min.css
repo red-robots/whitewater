@@ -1911,9 +1911,11 @@ section.page-header header{padding:15px 30px}
 .learnmore a{padding:10px 20px;display:block;color:#fff;background-color:#414042;text-decoration:none;-webkit-transition:all ease .6s;transition:all ease .6s}
 .learnmore a:hover{background-color:rgba(65,64,66,0.5)}
 .learnmore.right{float:right}
-.site-footer{width:100%;padding:100px 2% 2% 2%;clear:both;text-align:center;font-style:italic;font-size:.8rem;float:left}
-@media screen and (min-width:600px){.site-footer{text-align:right}
-}.site-footer a{color:rgba(0,0,0,0.9);text-decoration:none}
+.site-footer{padding:100px 2% 2% 2%}
+.site-footer-home{padding:0 2% 2% 2%}
+.site-footer,.site-footer-home{width:100%;clear:both;text-align:center;font-style:italic;font-size:.8rem;float:left}
+@media screen and (min-width:600px){.site-footer,.site-footer-home{text-align:right}
+}.site-footer a,.site-footer-home a{color:rgba(0,0,0,0.9);text-decoration:none}
 .sticky{display:block}
 .hentry{margin:0 0 1.5em}
 .byline,.updated:not(.published){display:none}
