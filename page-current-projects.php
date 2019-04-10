@@ -54,8 +54,10 @@ get_header(); ?>
 					 		</header>
 					 		<article class="sub-projects">
 					 			<?php echo $pageContent; ?>
-					 			<div class="learnmore">
-					 				<a href="<?php the_permalink(); ?>">Learn More</a>
+					 			<div class="clear margin-20">
+					 				<div class="learnmore right">
+						 				<a href="<?php the_permalink(); ?>">Learn More</a>
+						 			</div>
 					 			</div>
 					 		</article>
 				 		</div>

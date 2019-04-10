@@ -44,24 +44,20 @@ get_header(); ?>
 			    		$align = '-right';
 			    	}
 	 			?>
-			    <section class="projects">	
-		 			<section class="image<?php echo $align; ?> wow <?php echo $slide; ?> js-blocks">
+			    <section class="child-pages">	
+		 			<section class="image<?php echo $align; ?> wow <?php echo $slide; ?>">
 		 				<img src="<?php echo $featImg['url']; ?>" alt="<?php echo $featImg['alt']; ?>">
 		 			</section>
-		 			<section class="copy<?php echo $align; ?> wow <?php echo $slide; ?> js-blocks">
-		 				<div class="centered-copy">
-			 				<header class="sub-page-title">
-					 			<h2><?php the_title(); ?></h2>
-					 		</header>
-					 		<article class="sub-projects">
-					 			<?php echo $pageContent; ?>
-					 			<div class="clear margin-20">
-					 				<div class="learnmore right">
-						 				<a href="<?php the_permalink(); ?>">Learn More</a>
-						 			</div>
-					 			</div>
-					 		</article>
-				 		</div>
+		 			<section class="copy<?php echo $align; ?> wow <?php echo $slide; ?>">
+		 				<header class="sub-page-title">
+				 			<h2><?php the_title(); ?></h2>
+				 		</header>
+				 		<article class="sub-pages">
+				 			<?php echo $pageContent; ?>
+				 			<div class="learnmore">
+				 				<a href="<?php the_permalink(); ?>">Learn More</a>
+				 			</div>
+				 		</article>
 		 			</section>
 			    </section>
 

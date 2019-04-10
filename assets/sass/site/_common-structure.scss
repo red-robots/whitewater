@@ -3,6 +3,7 @@ div {
 	
 }
 .clear {clear: both;}
+.margin-20 {margin-top: 40px;}
 .wrapper {
 	width: 100%;
 	margin: 0px auto;
@@ -184,6 +185,7 @@ section.page-header {
 	display: inline-block;
 	text-transform: uppercase;
 	letter-spacing: 2px;
+	font-size: .7em;
 	a {
 		padding: 10px 20px;
 		display: block;
@@ -194,6 +196,9 @@ section.page-header {
 		&:hover {
 			background-color: rgba($color-black, .5);
 		}
+	}
+	&.right {
+		float: right;
 	}
 }
 .site-footer {
