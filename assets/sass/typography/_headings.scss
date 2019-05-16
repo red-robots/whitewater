@@ -8,7 +8,8 @@ h1, h2, h3, h4, h5, h6 {
 header.page-title,
 header.sub-page-title,
 .sub-pages,
-.sections {
+.sections,
+.team-members {
 	width: 100%;
 	float: left;
 	
@@ -28,4 +29,16 @@ header.page-title {
 }
 header.sub-page-title {
 	
+}
+.contact, .player {
+	h2, h3 {
+		font-size: 1.25rem;
+		font-family: $font-heading;
+		font-weight: 400;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+	}
+}
+.team-members h2 {
+	margin: 0 0 50px 0;
 }

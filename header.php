@@ -75,6 +75,15 @@
 			$pType = 'post';
 		}
 
+		// Pages
+		if( is_page('contact') ) {
+			$pClass = 'contact';
+		} elseif( is_page('who-we-are') ) {
+			$pClass = 'who-we-are';
+		} else {
+			$pClass = 'default';
+		}
+
 		if( $featImg ) {
 	 ?>
 	 	<section class="page-header wow fadeIn">
@@ -88,7 +97,7 @@
 		 			<h1><?php the_title(); ?></h1>
 		 		</header>
 	 		<?php } ?>
-	 		<article class="<?php echo $pType; ?>">
+	 		<article class="<?php echo $pType.' '.$pClass; ?>">
 	 			<?php 
 	 				$pageContent = get_field('page_intro');
 	 				echo $pageContent;
