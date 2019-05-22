@@ -32,8 +32,9 @@ get_header(); ?>
 
 			    	$i++;
 
-			    	$pageContent = get_field('excerpt');
+			    	$pageContent = get_field('page_intro');
 			    	$featImg = get_field('header_image');
+			    	$btn = get_field('learn_btn');
 			    	
 			    	if( $i == 2 ) { $i = 0; } 
 			    	if( $i == 1 ) {
@@ -56,9 +57,11 @@ get_header(); ?>
 					 		<article class="sub-projects">
 					 			<?php echo $pageContent; ?>
 					 			<div class="clear margin-20">
-					 				<div class="learnmore right">
-						 				<a href="<?php the_permalink(); ?>">Learn More</a>
-						 			</div>
+					 				<?php if( $btn == 'Yes' ) { ?>
+						 				<div class="learnmore right">
+							 				<a href="<?php the_permalink(); ?>">Learn More</a>
+							 			</div>
+						 			<?php } ?>
 					 			</div>
 					 		</article>
 				 		</div>
