@@ -12,6 +12,12 @@
     		<li>
     			<a href="<?php bloginfo('url'); ?>/what-we-do/branding/">Branding</a>
     		</li>
+            <li>
+                <a href="<?php bloginfo('url'); ?>/what-we-do/operations/">Operations</a>
+            </li>
+            <li>
+                <a href="<?php bloginfo('url'); ?>/what-we-do/consultancy/">Consultancy</a>
+            </li>
     	</ul>
 	</li>
 	<li>Current Projects
@@ -20,11 +26,14 @@
     			<a href="<?php bloginfo('url'); ?>/project/whitewater-center/">Whitewater Center</a>
     		</li>
     		<li>
-    			<a href="<?php bloginfo('url'); ?>/project/kansas/">Kansas</a>
+    			<a href="<?php bloginfo('url'); ?>/project/whitewater-outpost-columbia/">Whitewater Outpost - Columbia</a>
     		</li>
     		<li>
-    			<a href="<?php bloginfo('url'); ?>/project/niagra/">Niagra</a>
+    			<a href="<?php bloginfo('url'); ?>/project/whitewater-outpost-greenville/">Whitewater Outpost - Greenville</a>
     		</li>
+            <li>
+                <a href="<?php bloginfo('url'); ?>/project/kansas/">Kansas</a>
+            </li>
     	</ul>
 	</li>
 	<li>

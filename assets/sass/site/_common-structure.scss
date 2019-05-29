@@ -28,7 +28,9 @@ div {
 		
 	}
 }
-
+#content {
+	min-height: 83vh;
+}
 .content-area {
 	width: 100%;
 	margin: 0px auto;
@@ -102,6 +104,20 @@ section.page-header {
 	}
 	img {
 		width: 100%;
+		&.mobile {
+			@media screen and (min-width: $tabwidth) {
+				display: none;
+			}
+		}
+		&.desktop {
+			display: none;
+			@media screen and (min-width: $tabwidth) {
+				display: block;
+			}
+		}
+		&.desktop-no {
+			
+		}
 	}
 	header {
 		padding: 15px 30px;

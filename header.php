@@ -61,9 +61,13 @@
 			$post = get_post(12); // Homepage
 			setup_postdata( $post );
 				$featImg = get_field('header_image');
+				$featImgM = get_field('header_image_mobile');
 			wp_reset_postdata();
+		} elseif(get_post_type() == 'team' ) {
+			$featImg = get_field('photo');
 		} else {
 			$featImg = get_field('header_image');
+			$featImgM = get_field('header_image_mobile');
 			$featImgSingle = get_field('header_image_single');
 		}
 
@@ -71,6 +75,9 @@
 			$pType = 'page';
 		} elseif(get_post_type() == 'project' ) {
 			$pType = 'project';
+		} elseif(get_post_type() == 'team' ) {
+			$pType = 'team';
+			$position = get_field('position');
 		} else {
 			$pType = 'post';
 		}
@@ -84,25 +91,36 @@
 			$pClass = 'default';
 		}
 
+		// set the class for mobile
+		// if( $featImgM ) {
+		// 	$class = 'mobile';
+		// } else {
+		// 	$class = 'desktop';
+		// }
+
 		if( $featImg ) {
 	 ?>
 	 	<section class="page-header wow fadeIn">
-	 		<?php if( $featImgSingle ) { ?>
-	 			<img src="<?php echo $featImgSingle['url']; ?>" alt="<?php echo $featImgSingle['alt']; ?>">
+	 		<?php if( $featImgM ) { ?>
+	 			<img class="mobile" src="<?php echo $featImgM['url']; ?>" alt="<?php echo $featImgM['alt']; ?>">
+	 			<img class="desktop" src="<?php echo $featImg['url']; ?>" alt="<?php echo $featImg['alt']; ?>">
 	 		<?php } else { ?>
-	 			<img src="<?php echo $featImg['url']; ?>" alt="<?php echo $featImg['alt']; ?>">
+	 			<img class="desktop-no" src="<?php echo $featImg['url']; ?>" alt="<?php echo $featImg['alt']; ?>">
 	 		<?php } ?>
 	 		<?php if( !is_front_page() ) { ?>
 		 		<header class="page-title">
 		 			<h1><?php the_title(); ?></h1>
 		 		</header>
 	 		<?php } ?>
-	 		<article class="<?php echo $pType.' '.$pClass; ?>">
-	 			<?php 
-	 				$pageContent = get_field('page_intro');
-	 				echo $pageContent;
-	 			 ?>
-	 		</article>
+	 		<?php if( get_post_type() != 'team' ) { ?>
+		 		<article class="<?php echo $pType.' '.$pClass; ?>">
+		 			<?php  
+		 				$pageContent = get_field('page_intro');
+		 				echo $pageContent;
+					?>
+		 				
+		 		</article>
+	 		<?php } ?>
 	 	</section>
 	 	
 	 <?php } ?>

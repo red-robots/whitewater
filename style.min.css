@@ -1638,8 +1638,9 @@ header.page-title,header.sub-page-title,.sub-pages,.sections,.team-members{width
 header.page-title h1,header.page-title h2,header.sub-page-title h1,header.sub-page-title h2,.sub-pages h1,.sub-pages h2,.sections h1,.sections h2,.team-members h1,.team-members h2{font-family:brandon-grotesque,sans-serif;font-weight:400;letter-spacing:2px;text-transform:uppercase;margin:0 0 10px 0}
 header.page-title h2,header.sub-page-title h2,.sub-pages h2,.sections h2,.team-members h2{font-size:1.5em}
 .contact h2,.contact h3,.player h2,.player h3{font-size:1.25rem;font-family:brandon-grotesque,sans-serif;font-weight:400;letter-spacing:2px;text-transform:uppercase}
-.team-members h2{margin:0 0 50px 0}
-p{margin-bottom:1.5em}
+.team-members h2{margin:0 0 50px 5%}
+@media screen and (min-width:600px){.team-members h2{margin:0 0 50px 0}
+}p{margin-bottom:1.5em}
 dfn,cite,em,i{font-style:italic}
 blockquote{margin:0 1.5em}
 address{margin:0 0 1.5em}
@@ -1675,9 +1676,10 @@ textarea{padding-left:3px;width:100%}
 .gform_wrapper .top_label label.gfield_label{font-size:1rem;font-family:brandon-grotesque,sans-serif;font-weight:400;letter-spacing:2px;text-transform:uppercase}
 .gform_wrapper input{border-radius:0}
 .gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label{font-size:.9rem !important;font-family:brandon-grotesque,sans-serif;font-weight:400;letter-spacing:2px;text-transform:uppercase}
-.gform_wrapper .gform_footer input.button,.gform_wrapper .gform_footer input[type=submit],.gform_wrapper .gform_page_footer input.button,.gform_wrapper .gform_page_footer input[type=submit]{box-shadow:none;background-color:#414042;color:#fff;font-size:.8rem;font-family:brandon-grotesque,sans-serif;font-weight:400;letter-spacing:2px;text-transform:uppercase}
-a{color:#0999f3}
-a:hover,a:focus,a:active{color:midnightblue}
+.gform_wrapper .gform_footer input.button,.gform_wrapper .gform_footer input[type=submit],.gform_wrapper .gform_page_footer input.button,.gform_wrapper .gform_page_footer input[type=submit]{box-shadow:none;background-color:#414042;color:#fff;font-size:.7rem;font-family:brandon-grotesque,sans-serif;font-weight:400;letter-spacing:2px;text-transform:uppercase;text-shadow:none;border-color:#414042;border:0;padding-bottom:.6em 1em;-webkit-transition:all ease .2s;transition:all ease .2s}
+.gform_wrapper .gform_footer input.button:hover,.gform_wrapper .gform_footer input[type=submit]:hover,.gform_wrapper .gform_page_footer input.button:hover,.gform_wrapper .gform_page_footer input[type=submit]:hover{background-color:rgba(65,64,66,0.5);border-color:rgba(65,64,66,0.5)}
+a{color:#6b819e}
+a:hover,a:focus,a:active{color:#111}
 a:focus{outline:thin dotted}
 a:hover,a:active{outline:0}
 .main-navigation{clear:both;display:block;text-align:center;width:100%;position:relative;z-index:1000}
@@ -1874,6 +1876,7 @@ html[xmlns] .flexslider .slides{display:block}
 .margin-20{margin-top:40px}
 .wrapper{width:100%;margin:0 auto;padding:0}
 .header-wrapper{width:100%;margin:0 auto;padding:0}
+#content{min-height:83vh}
 .content-area{width:100%;margin:0 auto}
 @media screen and (min-width:600px){.content-area{width:66%;float:left;margin:0}
 }@media screen and (min-width:1200px){}
@@ -1890,7 +1893,10 @@ html[xmlns] .flexslider .slides{display:block}
 section.page-header{width:100%}
 @media screen and (min-width:600px){section.page-header{width:76%;float:right;padding:0 0 50px 0}
 }section.page-header img{width:100%}
-section.page-header header{padding:15px 30px}
+@media screen and (min-width:600px){section.page-header img.mobile{display:none}
+}section.page-header img.desktop{display:none}
+@media screen and (min-width:600px){section.page-header img.desktop{display:block}
+}section.page-header header{padding:15px 30px}
 @media screen and (min-width:600px){section.page-header header{padding:50px 0 30px 0}
 }section.page-header article.page{width:85%;float:left;padding:0 30px}
 @media screen and (min-width:600px){section.page-header article.page{width:100%;padding:0}
@@ -1961,6 +1967,14 @@ section.team-members{width:100%}
 }section.team-members .player:hover{box-shadow:0 9px 17px 0 rgba(0,0,0,0.29)}
 section.team-members .player a{color:#414042;text-decoration:none}
 section.team-members .player img{width:100%}
+body.single-team article .photo{width:80%;margin:20px auto}
+@media screen and (min-width:600px){body.single-team article .photo{width:30%;float:left;margin:0}
+}body.single-team article .info{width:88%;margin:20px auto}
+@media screen and (min-width:600px){body.single-team article .info{width:90%;float:left;margin:-80px 0 0 0}
+}@media screen and (min-width:900px){body.single-team article .info{width:70%}
+}@media screen and (min-width:1200px){body.single-team article .info{width:50%}
+}body.single-team article header{padding:0}
+body.single-team article h1{font-weight:300;font-size:1.5rem;margin:0}
 .blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
