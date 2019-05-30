@@ -1,5 +1,5 @@
 /*!
-Theme Name: ACStarter
+Theme Name: Whitewater.org
 Theme URI: http://austincrane.me/
 Author: Austin Crane
 Author URI: http://austincrane.me/
@@ -1940,13 +1940,13 @@ section.page-header{width:100%}
 }.projects .image-right,.projects .image-left{width:100%}
 @media screen and (min-width:600px){.projects .image-right,.projects .image-left{width:50%}
 }.projects .copy-left,.projects .copy-right{width:100%;padding:30px;font-style:italic}
-@media screen and (min-width:600px){.projects .copy-left,.projects .copy-right{width:50%;padding:0 0 0 50px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
+@media screen and (min-width:600px){.projects .copy-left,.projects .copy-right{width:50%;padding:0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
 }@media screen and (min-width:600px){.projects .copy-left header,.projects .copy-right header{padding:0 0 30px 0}
 }.projects .copy-left article.sub-projects,.projects .copy-right article.sub-projects{width:100%;margin:0 auto}
 .projects .copy-left p,.projects .copy-right p{font-size:1.2rem}
 .projects .centered-copy{width:70%;margin:0 auto}
 @media screen and (min-width:600px){.projects .centered-copy{width:80%}
-}@media screen and (min-width:1200px){.projects .centered-copy{width:60%}
+}@media screen and (min-width:1200px){.projects .centered-copy{width:75%}
 }.projects .image-right,.projects .copy-left{float:right}
 .projects .image-left,.projects .copy-right{float:left}
 .page-links{clear:both;margin:0 0 1.5em}

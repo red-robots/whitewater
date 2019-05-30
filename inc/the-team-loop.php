@@ -44,7 +44,7 @@ if ($parent->have_posts()) : ?>
 		 		<?php echo $j; ?>
 		 		<article class="sub-projects">
 		 			<?php the_content(); ?>
-		 			<div class="clear margin-20">
+		 			<div class="clear margin-205">
 		 				<?php if( $btn == 'Yes' ) { ?>
 			 				<div class="learnmore right">
 				 				<a href="<?php the_permalink(); ?>">Learn More</a>
