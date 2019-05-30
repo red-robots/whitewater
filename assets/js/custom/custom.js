@@ -28,6 +28,9 @@ jQuery(document).ready(function ($) {
 	$('li.menu-item-has-children').click( function() {
         $(this).find('ul.sub-menu').css('maxHeight:1000');
     });
+    $('li.menu-item-has-children a').click( function() {
+        $(this).find('ul.sub-menu').css('maxHeight:1000');
+    });
 	/*
         FAQ dropdowns
 	__________________________________________

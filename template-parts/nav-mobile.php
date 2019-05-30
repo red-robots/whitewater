@@ -3,7 +3,19 @@
 </div>
 
 <nav class="mobilemenu">
-  <ul class="main">
+<?php 
+
+
+wp_nav_menu( array( 
+    'theme_location' => 'mobile', 
+    'menu_id' => 'primary-menu',
+    'container' => '',
+    'menu_class' => 'main'
+)); 
+
+
+?>
+ <!--  <ul class="main">
     <li>
     	<a href="<?php bloginfo('url'); ?>/who-we-are">Who We Are</a>
     </li>
@@ -39,5 +51,5 @@
 	<li>
 		<a href="<?php bloginfo('url'); ?>/contact">Contact</a>
 	</li>
-  </ul>
+  </ul> -->
 </nav>	

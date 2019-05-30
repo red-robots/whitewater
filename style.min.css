@@ -1752,6 +1752,8 @@ nav.mobilemenu.show ul.main li:nth-child(9){-webkit-transition-delay:1.35s;trans
 nav.mobilemenu.show ul.main li ul.dropdown{max-height:0;overflow:hidden}
 nav.mobilemenu.show ul.main li ul.dropdown li{list-style:none;font-size:14px}
 nav.mobilemenu.show ul.main li ul.dropdown.active{max-height:1000px}
+nav.mobilemenu.show ul.main li ul{list-style:none}
+nav.mobilemenu.show ul.main li ul li{font-size:.9rem;margin:0}
 nav.mobilemenu.show .about,nav.mobilemenu.show .social,nav.mobilemenu.show ul.sub{-webkit-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0);opacity:1;-webkit-transition-delay:.85s;transition-delay:.85s}
 @media(min-width:667px){nav.mobilemenu{padding:120px 90px 70px 90px}
 }nav.mobilemenu ul.main{list-style-type:none;margin:0}

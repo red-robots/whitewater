@@ -31,7 +31,8 @@ get_header(); ?>
 
 			    	$i++;
 
-			    	$pageContent = get_field('excerpt');
+			    	$pageContent = get_field('page_intro');
+    				$excerpt = get_field('excerpt');
 			    	$featImg = get_field('header_image');
 			    	
 			    	if( $i == 2 ) { $i = 0; } 
@@ -53,7 +54,13 @@ get_header(); ?>
 					 			<h2><?php the_title(); ?></h2>
 					 		</header>
 					 		<article class="sub-projects">
-					 			<?php echo $pageContent; ?>
+					 			<?php 
+						 			if( $excerpt ) {
+					 					echo $excerpt;
+					 				} else {
+					 					echo $pageContent;
+					 				}
+								?>
 					 			<div class="clear margin-20">
 					 				<div class="learnmore right">
 						 				<a href="<?php the_permalink(); ?>">Learn More</a>

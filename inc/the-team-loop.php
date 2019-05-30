@@ -2,9 +2,8 @@
 $i = 0;
 $parent = new WP_Query(array(
 
-    'post_type'      => 'page',
+    'post_type'      => 'team',
     'posts_per_page' => -1,
-    'post_parent'    => $post->ID,
     'order'          => 'ASC',
     'orderby'        => 'menu_order'
 
@@ -22,7 +21,7 @@ if ($parent->have_posts()) : ?>
     	$excerpt = get_field('excerpt');
     	$featImg = get_field('header_image');
     	$btn = get_field('learn_btn');
-    	
+    	$photo = get_field('photo');
     	
     	if( $i == 2 ) { $i = 0; } 
     	if( $i == 1 ) {
@@ -35,7 +34,7 @@ if ($parent->have_posts()) : ?>
 		?>
     <section class="projects">	
 			<section class="image<?php echo $align; ?> wow <?php echo $slide; ?> js-blocks">
-				<img src="<?php echo $featImg['url']; ?>" alt="<?php echo $featImg['alt']; ?>">
+				<img src="<?php echo $photo['url']; ?>" alt="<?php echo $photo['alt']; ?>">
 			</section>
 			<section class="copy<?php echo $align; ?> wow <?php echo $slide; ?> js-blocks">
 				<div class="centered-copy">
@@ -44,13 +43,7 @@ if ($parent->have_posts()) : ?>
 		 		</header>
 		 		<?php echo $j; ?>
 		 		<article class="sub-projects">
-		 			<?php 
-			 			if( $excerpt ) {
-		 					echo $excerpt;
-		 				} else {
-		 					echo $pageContent;
-		 				}
-					?>
+		 			<?php the_content(); ?>
 		 			<div class="clear margin-20">
 		 				<?php if( $btn == 'Yes' ) { ?>
 			 				<div class="learnmore right">

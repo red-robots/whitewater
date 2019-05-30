@@ -581,6 +581,7 @@ nav.mobilemenu {
     @include transform(translateX(0px));
     
     ul.main {
+
       li {
         @include transform(translateX(0px));
         opacity: 1;
@@ -595,6 +596,7 @@ nav.mobilemenu {
         ul.dropdown {
         	max-height: 0;
         	overflow: hidden;
+
         	li {
         		list-style: none;
         		font-size: 14px;
@@ -602,6 +604,13 @@ nav.mobilemenu {
         }
         ul.dropdown.active {
         	max-height: 1000px;
+        }
+        ul {
+          list-style: none;
+          li {
+            font-size: .9rem;
+            margin: 0;
+          }
         }
       }
     }
