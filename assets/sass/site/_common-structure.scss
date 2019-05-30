@@ -116,7 +116,7 @@ section.page-header {
 			}
 		}
 		&.desktop-no {
-			
+
 		}
 	}
 	header {
@@ -125,7 +125,7 @@ section.page-header {
 			padding: 50px 0 30px 0;
 		}
 	}
-	article.page {
+	article.page, article.project {
 		width: 85%;
 		float: left;
 		padding: 0 30px;
@@ -137,18 +137,18 @@ section.page-header {
 			width: 45%;
 		}
 	}
-	article.project {
-		width: 100%;
-		float: left;
-		padding: 0 30px;
-		@media screen and (min-width: $tabwidth) {
-			width: 100%;
-			padding: 0;
-		}
-		@media screen and (min-width: $deskwidth) {
-			width: 96%;
-		}
-	}
+	// article.project {
+	// 	width: 100%;
+	// 	float: left;
+	// 	padding: 0 30px;
+	// 	@media screen and (min-width: $tabwidth) {
+	// 		width: 100%;
+	// 		padding: 0;
+	// 	}
+	// 	@media screen and (min-width: $deskwidth) {
+	// 		width: 96%;
+	// 	}
+	// }
 }
 .child-pages {
 	width: 100%;

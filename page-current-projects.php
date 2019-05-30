@@ -61,7 +61,7 @@ get_header(); ?>
 					 					echo $pageContent;
 					 				}
 								?>
-					 			<div class="clear margin-20">
+					 			<div class="clear margin-205">
 					 				<div class="learnmore right">
 						 				<a href="<?php the_permalink(); ?>">Learn More</a>
 						 			</div>

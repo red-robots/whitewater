@@ -38,14 +38,28 @@ get_header(); ?>
 			    		$align = '-right';
 			    	}
 	 			?>
-			    <section class="child-pages">	
-		 			<section class="image<?php echo $align; ?> wow <?php echo $slide; ?>">
+			    <section class="projects">	
+		 			<section class="image<?php echo $align; ?> wow <?php echo $slide; ?> js-blocks">
 		 				<img src="<?php echo $featImg['url']; ?>" alt="<?php echo $featImg['alt']; ?>">
 		 			</section>
-		 			<section class="copy<?php echo $align; ?> wow <?php echo $slide; ?>">
-		 				<article class="sections">
-				 			<?php echo $pageContent; ?>
-				 		</article>
+		 			<section class="copy<?php echo $align; ?> wow <?php echo $slide; ?> js-blocks">
+		 				<div class="centered-copy">
+			 				<!-- <header class="sub-page-title">
+					 			<h2><?php the_title(); ?></h2>
+					 		</header> -->
+					 		<article class="sub-projects">
+					 			<?php 
+						 			if( $excerpt ) {
+					 					echo $excerpt;
+					 				} else {
+					 					echo $pageContent;
+					 				}
+								?>
+					 			<div class="clear margin-205">
+					 				
+					 			</div>
+					 		</article>
+				 		</div>
 		 			</section>
 			    </section>
 
