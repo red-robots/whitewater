@@ -23,6 +23,15 @@ function js_custom_init() {
             'supports'  => array('title','editor','thumbnail'),
             
         ),
+        array(
+            'post_type' => 'brand',
+            'menu_name' => 'Brands',
+            'plural'    => 'Brand',
+            'single'    => 'Brands',
+            'menu_icon' => 'dashicons-groups',
+            'supports'  => array('title','editor','thumbnail'),
+            
+        ),
     );
     
     if($post_types) {
