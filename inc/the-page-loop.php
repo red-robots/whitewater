@@ -18,11 +18,16 @@ if ($parent->have_posts()) : ?>
 
     	$i++;
 
+    	$link = get_the_permalink();
+    	$btnText = 'Learn More';
     	$pageContent = get_field('page_intro');
     	$excerpt = get_field('excerpt');
     	$featImg = get_field('header_image');
     	$btn = get_field('learn_btn');
-    	
+    	if( is_page( 'what-we-do ') ) { echo 'alsdifhaosdifjias';
+    		$link = get_bloginfo('url').'/contact';
+    		$btnText = 'Contact';
+    	}
     	
     	if( $i == 2 ) { $i = 0; } 
     	if( $i == 1 ) {
@@ -54,7 +59,7 @@ if ($parent->have_posts()) : ?>
 		 			<div class="clear margin-205">
 		 				<?php if( $btn == 'Yes' ) { ?>
 			 				<div class="learnmore right">
-				 				<a href="<?php the_permalink(); ?>">Learn More</a>
+				 				<a href="<?php echo $link; ?>"><?php echo $btnText; ?></a>
 				 			</div>
 			 			<?php } ?>
 		 			</div>
